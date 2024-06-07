@@ -1,0 +1,43 @@
+/* Common styling for all screen sizes */
+body {
+  margin: 0;
+  background-color: #f1f1f1;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: azure;
+}
+
+.App .card {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .App .card {
+    display: flex;
+    padding: 0;
+    margin: 10px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+}

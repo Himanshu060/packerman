@@ -1,0 +1,50 @@
+/* table.css */
+
+.table th,
+.table td {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    text-align: center;
+}
+
+.table th {
+
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+/* table.css */
+
+.table-container {
+    max-height: 300px;
+    /* Set the maximum height for the container */
+    overflow-y: auto;
+    /* Add vertical scroll when the content overflows */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+.delete-btn{
+    background-color: #f44242;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        margin-right: 20px;
+}
+
+/* Rest of your existing CSS... */

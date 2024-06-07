@@ -1,0 +1,19 @@
+/* SkeletonComponent.css */
+
+.skeleton {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 400px;
+    /* Adjust width as needed */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.skeleton-row {
+    height: 20px;
+    margin: 5px 0;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}

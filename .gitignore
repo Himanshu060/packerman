@@ -1,0 +1,17 @@
+node_modules
+*/*/.env
+*/.env.*
+*/.env.local
+*/.env.development.local
+*/.env.test.local
+*/.env.production.local
+*/.eslintcache
+*/.git
+*/.gitignore
+*/.idea
+*/.postcssrc.js
+*/.vscode
+*/.yarnrc
+*/.yarn
+*/.yarn-integrity
+*/.yarn-m
