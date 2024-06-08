@@ -6,12 +6,10 @@ const logSchema = new mongoose.Schema({
     containerId: {
         type: String,
         primary: true
-        // required: [true, "Please enter the containerId"]
     },
     boxes: {
         type: Array,
         default: []
-        // required: [true, "Please enter the boxlog"]
     }, 
     createdAt: {
         type: Date,
