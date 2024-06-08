@@ -134,48 +134,6 @@ function maximizeWeight(objects, containerVolume, maxWeight) {
   return bestWeightConfiguration;
 }
 
-// Backtracking algorithm for maximizePackingEfficiency without density
-// function maximizePackingEfficiency(objects, containerVolume, maxWeight) {
-//   let maxEfficiencyPacked = 0;
-//   let currentEfficiency = 0;
-//   let bestEfficiencyConfiguration = [];
-
-//   function backtrack(itemIndex, packedVolume, packedWeight, currentEfficiencyConfiguration) {
-//     if (itemIndex >= objects.length) {
-//       if (currentEfficiency > maxEfficiencyPacked) {
-//         maxEfficiencyPacked = currentEfficiency;
-//         bestEfficiencyConfiguration = [...currentEfficiencyConfiguration];
-//       }
-//       return;
-//     }
-
-//     if (objects[itemIndex].containerNum.length != 0) {
-//       backtrack(itemIndex + 1, packedVolume, packedWeight, currentEfficiencyConfiguration);
-//       return;
-//     }
-
-//     if (packedVolume + objects[itemIndex].volume <= containerVolume && packedWeight + objects[itemIndex].weight <= maxWeight) {
-//       packedVolume += objects[itemIndex].volume;
-//       packedWeight += objects[itemIndex].weight;
-//       currentEfficiency += objects[itemIndex].volume / objects[itemIndex].weight;
-//       currentEfficiencyConfiguration.push(objects[itemIndex]);
-
-//       backtrack(itemIndex + 1, packedVolume, packedWeight, currentEfficiencyConfiguration);
-
-//       packedVolume -= objects[itemIndex].volume;
-//       packedWeight -= objects[itemIndex].weight;
-//       currentEfficiency -= objects[itemIndex].volume / objects[itemIndex].weight;
-//       currentEfficiencyConfiguration.pop();
-//     }
-
-//     backtrack(itemIndex + 1, packedVolume, packedWeight, currentEfficiencyConfiguration);
-//   }
-
-//   backtrack(0, 0, 0, []);
-
-//   return bestEfficiencyConfiguration;
-// }
-
 
 // // Backtracking algorithm for maximizePackingEfficiency
 function maximizePackingEfficiency(objects, containerVolume, maxWeight) {
@@ -241,71 +199,6 @@ function maximizePackingEfficiency(objects, containerVolume, maxWeight) {
 
   return bestVolumeConfiguration;
 }
-
-
-//Greedy
-// Greedy algorithm for maximizeProfit
-// function maximizeProfit(objects, containerVolume, maxWeight) {
-//   // Sort objects in descending order of profit
-//   objects.sort((a, b) => b.price - a.price);
-
-//   let packedVolume = 0;
-//   let packedWeight = 0;
-//   let packedObjects = [];
-
-//   for (let i = 0; i < objects.length; i++) {
-//     if (objects[i].containerNum.length != 0) continue;
-//     if (packedVolume + objects[i].volume <= containerVolume && packedWeight + objects[i].weight <= maxWeight) {
-//       packedVolume += objects[i].volume;
-//       packedWeight += objects[i].weight;
-//       packedObjects.push(objects[i]);
-//     }
-//   }
-
-//   return packedObjects;
-// }
-
-// // Greedy algorithm for maximizeWeight
-// function maximizeWeight(objects, containerVolume, maxWeight) {
-//   // Sort objects in descending order of weight
-//   objects.sort((a, b) => b.weight - a.weight);
-
-//   let packedVolume = 0;
-//   let packedWeight = 0;
-//   let packedObjects = [];
-
-//   for (let i = 0; i < objects.length; i++) {
-//     if (objects[i].containerNum.length != 0) continue;
-//     if (packedVolume + objects[i].volume <= containerVolume && packedWeight + objects[i].weight <= maxWeight) {
-//       packedVolume += objects[i].volume;
-//       packedWeight += objects[i].weight;
-//       packedObjects.push(objects[i]);
-//     }
-//   }
-
-//   return packedObjects;
-// }
-// // Greedy algorithm for maximizePackingEfficiency
-// Greedy algorithm for maximizePackingEfficiency by maximizing volume
-// function maximizePackingVolume(objects, containerVolume, maxWeight) {
-//   // Sort objects in descending order of volume
-//   objects.sort((a, b) => b.volume - a.volume);
-
-//   let packedVolume = 0;
-//   let packedWeight = 0;
-//   let packedObjects = [];
-
-//   for (let i = 0; i < objects.length; i++) {
-//     if (objects[i].containerNum.length != 0) continue;
-//     if (packedVolume + objects[i].volume <= containerVolume && packedWeight + objects[i].weight <= maxWeight) {
-//       packedVolume += objects[i].volume;
-//       packedWeight += objects[i].weight;
-//       packedObjects.push(objects[i]);
-//     }
-//   }
-
-//   return packedObjects;
-// }
 
 
 exports.main = main;
